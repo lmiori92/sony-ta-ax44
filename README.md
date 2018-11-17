@@ -15,6 +15,11 @@ The D553C is a P-MOS device requiring negative supply. We won't use any negative
 
 The microcontroller that is going to run the factory test will instead be feed by the same power rail, just normally and regulated down to +5V.
 
+All voltages are referring to these voltages i.e. not the inverted ones!
+
 # Factory Test Mode
 
-The Factory Test Mode is enabled when pin TEST is at +10V
+The Factory Test Mode is enabled when pin TEST is at 0V; it is disabled i.e. normal operation if the pin is at +10V.
+
+Data ports C (low-nibble) and D (high-nibble) are used to transfer the ROM bytes to the dumping microcontroller (it is not known if this port can be also used for more factory testing functionalities e.g. RAM check or so.
+They switch to 0V when "high".
