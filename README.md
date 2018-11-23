@@ -23,3 +23,7 @@ The Factory Test Mode is enabled when pin TEST is at 0V; it is disabled i.e. nor
 
 Data ports C (low-nibble) and D (high-nibble) are used to transfer the ROM bytes to the dumping microcontroller (it is not known if this port can be also used for more factory testing functionalities e.g. RAM check or so.
 They switch to 0V when "high".
+
+# Notes
+
+a. It seems that JMPs to the currently selected page are not executed. I don't know if that is a feature or what? To be tested.
