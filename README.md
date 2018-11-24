@@ -26,4 +26,6 @@ They switch to 0V when "high".
 
 # Notes
 
-a. It seems that JMPs to the currently selected page are not executed. I don't know if that is a feature or what? To be tested.
+a. The clock can be slower than the actual specification (150kHz-400kHz). Jitter seems not affecting dumping. (Not yet really verified by running the code in the emulator)
+b. The chip seems going crazy (i.e. jumping or running?) if no clocking happens for about 10 seconds. Interesting is, the dumped data is actually something valid and JUMPing to the dumped jump instruction(s) works fine.
+c. 4 consecutive dumps on 2 chips have been dumped equally. Need to write a disasassembler and see what we got.
